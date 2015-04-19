@@ -21,3 +21,7 @@ I love the fact that zed mentions Valgrind so [early](http://c.learncodethehardw
 
 ###strace
 strace is one of the most useful debugging tools any linux developer can have. On Mac OS try the "dtruss" command for the same overwhelming feeling of gleefulnees.
+
+###gdb
+[This](http://rsquared.sdf.org/gdb/) is a great little resource.
+

@@ -1,0 +1,16 @@
+#!/usr/bin/python2
+import sys
+
+def runCommand(name):
+    module = name
+    fh = open('Makefile', "w")
+    template = ("CFLAGS = -Wall -g\n",
+    "CC=clang\n",
+    "clean:\n",
+    "\trm -f %s\n" % module)
+    fh.writelines(template)
+    fh.close()
+
+if __name__ == '__main__':
+    runCommand(sys.argv[1])
+
