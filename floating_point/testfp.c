@@ -1,8 +1,8 @@
-#include<stdlib.h>
+#include<stdio.h>
 
 int main(int argc, char* arg[]) 
 {
-    puts("hello\n");
+    printf("hello\n");
     return 0;
 }
 
