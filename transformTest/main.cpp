@@ -18,9 +18,6 @@
 
 
 using namespace std::placeholders;
-//using namespace std;
-
-//template<typename T>
 void printVal(int i) {
     std::cout << i << std::endl;
 }
