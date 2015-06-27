@@ -26,10 +26,8 @@ void printVal(int i) {
 }
 
 void printVal2(double d) {
-    //std::cout.precision(5);
-    //std::cout << std::fixed << d << std::endl;
-    printf("%f", d);
-    
+    std::cout.precision(5);
+    std::cout << std::fixed << d << std::endl;    
 }
 /*
  * 
@@ -70,7 +68,7 @@ int main(int argc, char** argv) {
     std::transform(M.begin(), M.end(), std::inserter(S2, S2.begin()), 
             std::bind(&MyMap::value_type::second, _1));
     printf("======== dump values with for_each== \n");
-    std::for_each(S2.begin(), S2.end(), printVal);
+    std::for_each(S2.begin(), S2.end(), printVal2);
     
     MySet2::iterator it = S2.begin();
     
