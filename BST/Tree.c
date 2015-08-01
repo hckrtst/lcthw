@@ -5,6 +5,7 @@ static sk_err_code make_node(int data, struct sk_node **node)
 {
     *node = (struct sk_node*) malloc(sizeof(struct sk_node));
     if (*node) {
+        printf("allocted node for %d\n", data);
         return SK_SUCC;
     }
     printf("Error allocating memory for node\n");
@@ -13,8 +14,8 @@ static sk_err_code make_node(int data, struct sk_node **node)
 
 sk_err_code sk_insert_recursive(struct sk_tree *tree, int data)
 {
-    
-    return sk_insert_r(tree->root, data);
+    tree->root =  sk_insert_r(tree->root, data);
+    return SK_SUCC;
 }
 
 struct sk_node *sk_insert_r(struct sk_node *root, int data) 
@@ -24,7 +25,7 @@ struct sk_node *sk_insert_r(struct sk_node *root, int data)
             if (SK_SUCC != make_node(data, &root)) {
                 printf("Error making new node");
                 break;
-            } 
+            }           
             return root;
         } else if (root->data == data) {
             // Don't allow duplicates
