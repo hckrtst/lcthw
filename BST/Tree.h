@@ -41,6 +41,8 @@ sk_err_code sk_find_recursive(struct sk_tree *tree, int data);
 sk_err_code sk_find_i(struct sk_node *root, int data);
 sk_err_code sk_find_iterative(struct sk_tree *tree, int data);
 
+//sk_err_code sk_delete()
+
 /*static inline void sk_dump_tree(struct sk_tree *tree) {
     // TODO write recursive version
     if ((NULL == tree) || (NULL == tree->root)) {
